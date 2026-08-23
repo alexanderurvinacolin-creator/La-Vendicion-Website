@@ -1,0 +1,36 @@
+// ==========================================
+// Variables del Álbum Destacado (Requisito PDF)
+// ==========================================
+
+// 1. Variables String (Cadenas de texto)
+let nombreAlbum = "A.D.R.O.M.I.C.F.M.S 4";
+let artistaPrincipal = "Yung Beef";
+
+// 2. Variables Number (Números)
+let añoLanzamiento = 2018;
+let calificacionUnderground = 9.5;
+
+// 3. Variable Boolean (Verdadero o Falso)
+let disponibleEnPlataformas = true;
+
+// ==========================================
+// Fase PRUEBO: Mostrando resultados en consola
+// ==========================================
+
+console.log("=== DATOS DE LA RECOMENDACIÓN PRINCIPAL ===");
+console.log("Álbum: " + nombreAlbum);
+console.log("Artista: " + artistaPrincipal);
+console.log("Año de lanzamiento: " + añoLanzamiento);
+console.log("Calificación: " + calificacionUnderground + "/10");
+console.log("¿Está disponible para escuchar?: " + disponibleEnPlataformas);
+
+// ==========================================
+// Operaciones Lógicas Básicas (Pensamiento Lógico)
+// ==========================================
+
+// Calculo hace cuántos años salió el álbum usando variables numéricas.
+let añoActual = 2026;
+let añosDesdeLanzamiento = añoActual - añoLanzamiento;
+
+console.log("=== DATO CURIOSO ===");
+console.log("Han pasado " + añosDesdeLanzamiento + " años desde que se lanzó esta joya.");
