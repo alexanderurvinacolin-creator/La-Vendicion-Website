@@ -74,10 +74,8 @@ Uno de los conceptos que más comprendí gracias a la IA fue la diferencia entre
 
 Sí hubo momentos donde la IA generó código que no comprendía del todo a la primera — por ejemplo, las clases `d-flex flex-column text-center` que aparecieron en mis cards sin que las hubiera pedido explícitamente. En vez de dejarlas sin más, pregunté qué hacía cada una antes de seguir usándolas. También tuve errores reales de depuración fuera del código en sí: un video de YouTube que no cargaba por copiar mal el ID del embed, y más de un conflicto de Git (`commit-m` sin espacio, y un push rechazado por ramas divergentes) que resolví entendiendo la diferencia entre mi repositorio local y el remoto en GitHub, en vez de solo copiar un comando sin saber qué hacía.
 
-## 📸 Captura del sitio funcionando
 
-*(Agregar aquí una captura de pantalla del sitio final)*
 
 ## 🔗 Repositorio
 
-*(Agregar aquí el link a tu repositorio de GitHub)*
+*(https://github.com/alexanderurvinacolin-creator/La-Vendicion-Website)*
