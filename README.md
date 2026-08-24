@@ -1,59 +1,83 @@
-# 1. Nombre del proyecto
-La Vendicion Records - Recomendador Musical
+# La Vendición Records — Mi Recomendador Personal
 
-# 2. Descripción
-**¿Qué hace tu recomendador?**
-Es un mini sitio web diseñado para introducir a nuevos oyentes al concepto del sello discográfico independiente español "La Vendicion Records". Recomienda un "Top 3" de canciones iniciales, detalla brevemente la historia del sello, y sugiere 3 álbumes imprescindibles para entender su impacto en la música urbana.
+## 📌 Descripción
 
-**Preguntas de mi fase "PIENSO":**
-*   **¿Qué voy a recomendar?** Canciones y álbumes del sello La Vendicion.
-*   **¿A quién va dirigida la página?** A fans del rap, trap y reggaetón underground que quieran conocer los orígenes de esta ola en España.
-*   **¿Qué información tendrá cada recomendación?** Título de la obra, una imagen de portada, una breve reseña justificando la elección y un botón para escucharla.
-*   **¿Qué quiero que suceda cuando el usuario interactúe con mi página?** Que pueda navegar fluidamente por las secciones, visualizar imágenes en el carrusel, leer las reseñas y ver la entrevista final adaptada a cualquier tamaño de pantalla.
+Mini sitio web que recomienda contenido del sello discográfico independiente **La Vendición Records** (música urbana, España). El sitio recorre la historia del sello, sus canciones y álbumes más representativos, y su proyección a futuro, pensado tanto como entrega de bootcamp como pieza de portafolio.
 
-# 3. Tecnologías
-*   HTML5 (Enfoque en semántica: `<article>`, `<header>`, `<footer>`, `<aside>`)
-*   CSS3 (Estilos personalizados: variables de color, tipografía y transiciones)
-*   Bootstrap 5 (Layout: Navbar, Grid System `row/col`, Cards, Carousel, Ratio)
-*   JavaScript (Variables básicas y operaciones en consola)
-*   Git (Control de versiones, mínimo 5 commits)
-*   GitHub (Alojamiento del repositorio)
-*   IA utilizada: ChatGPT / Claude / Gemini (como tutor de apoyo)
+El recomendador funciona a través de:
+- **Inicio**: 3 canciones destacadas ("Si mañana me muero", "Soy Bichote - Remix", "Rifle Bisexual")
+- **¿Qué es La Vendición?**: historia del sello (fundado en diciembre 2015 por Yung Beef) y línea de tiempo de hitos 2016–2026
+- **Imprescindibles**: 3 álbumes clave para entender el concepto del sello
+- **¿Qué sigue?**: actualidad y futuro del sello (Infierno Festival, nuevos lanzamientos, nuevas promesas)
+- **Footer**: enlaces a redes sociales del sello
 
----
+## 🛠 Tecnologías
 
-# 4. Proceso con IA (Registro de Prompts)
+- HTML5 semántico
+- CSS3 (variables personalizadas, tipografías de Google Fonts, efectos hover)
+- Bootstrap 5 (navbar, container, row/col, cards, botones, carousel, badge)
+- JavaScript básico (variables `let`, tipos string/number/boolean, `console.log()`)
+- Git y GitHub
+- Herramienta de IA como tutor/asistente durante el proceso
 
-| # | ¿Qué necesitábamos? | Prompt | ¿Qué respondió? | ¿Qué utilicé? | ¿Qué aprendí? |
-|---|---|---|---|---|---|
-| 1 | Planificar página y Layout Base | "Actúa como tutor web. Estoy creando un recomendador sobre La Vendicion con HTML y Bootstrap. Ayúdame a crear la estructura de 3 tarjetas usando la grilla. No uses CSS ni JS." | Me dio el código base de `<div class="row">` y `<div class="col-md-4">` con tarjetas estándar de Bootstrap. | Utilicé la lógica de las clases `col-md-4` y las clases de la tarjeta (`card`, `card-body`). | Aprendí que Bootstrap divide la pantalla en 12 columnas y 12/3 = 4. |
-| 2 | Componente Carrusel | "Necesito hacer un carrusel de 4 imágenes para mi sección de historia usando solo Bootstrap, sin programar JS por mi cuenta." | Me entregó la estructura del componente Carousel con los atributos `data-bs-ride="carousel"`. | Usé toda la estructura de controles y contenedores, pero cambié los `div` internos por `<figure>`. | Aprendí que Bootstrap usa atributos `data-bs-*` para dar interactividad HTML sin tocar JS. |
-| 3 | Video Responsivo | "Tengo un iframe de YouTube pero se deforma en celular. ¿Cómo lo hago responsivo solo con clases de Bootstrap?" | Me explicó el uso de las clases de proporción (Ratio). | Envolví mi iframe en un contenedor `<figure class="ratio ratio-16x9">`. | Comprendí que el framework puede calcular matemáticamente las proporciones (16:9) automáticamente. |
-| 4 | JavaScript Variables | "Estoy aprendiendo JS. Dame un ejemplo de cómo guardar datos de un álbum usando variables de texto, número y booleanos, e imprimirlos en consola." | Me dio un ejemplo usando `let` y `console.log()` con concatenación de cadenas. | Tomé la estructura y creé mis propias variables (nombreAlbum, añoLanzamiento, etc.). | Entendí la diferencia de tipos de datos y cómo concatenar texto con variables numéricas. |
+## 🤖 Proceso con IA
 
-**¿Cuál fue el prompt más útil y por qué?**
-El prompt 3 (Video Responsivo) fue el más útil. Yo intentaba usar `width="100%"` en el iframe, lo que arruinaba la altura. La IA me explicó el concepto de la clase `ratio` de Bootstrap, lo cual resolvió un problema complejo de diseño responsivo de forma muy elegante y con una sola línea de código.
+Trabajé con la IA como tutor, no como generador de código: en cada etapa (HTML, Bootstrap, CSS, JavaScript) le pedí explícitamente que no me diera la solución completa, sino que me guiara con preguntas, pistas y explicaciones, y que me detuviera a explicar cualquier concepto nuevo antes de seguir.
 
----
+### Prompt 1 — Planificar la página (etapa HTML)
+**Necesitaba:** entender cómo dividir mi proyecto "Mi recomendador personal" en pasos pequeños, respetando que solo conocía HTML, CSS, Bootstrap básico y variables de JavaScript.
+**Qué respondió la IA:** propuso empezar por el esqueleto HTML semántico (`header`, `main`, `section`, `footer`) antes de meter contenido, y guiarme con preguntas en vez de darme el código completo.
+**Qué utilicé:** la estructura de 5 secciones (Inicio, ¿Qué es La Vendición?, Imprescindibles, ¿Qué sigue?, Footer) que yo mismo propuse a partir de esa guía.
+**Qué aprendí:** la diferencia entre HTML semántico (`header`, `main`, `section`, `article`) y usar `<div>` genéricos para todo — y por qué la jerarquía de anidación (qué va dentro de qué) importa aunque el navegador no siempre marque error si está mal.
 
-# 5. Código generado vs. código propio
+### Prompt 2 — HTML (depuración de estructura)
+**Necesitaba:** validar que mi anidación de etiquetas fuera correcta después de escribir mi primer boceto.
+**Qué respondió la IA:** en vez de corregirlo directamente, me hizo preguntas guía para que yo mismo detectara que mis `<section>` habían quedado fuera de `<main>`, y que mi `<footer>` estaba fuera de `<body>`.
+**Qué utilicé:** corregí la anidación yo mismo comparando línea por línea.
+**Qué aprendí:** que el navegador no siempre "avisa" cuando algo está mal (como una clase de Bootstrap sin conectar, o una etiqueta mal anidada) — el paso de PROBAR en el navegador es indispensable, no opcional.
 
-*   **¿Qué generó la IA?**
-    La IA me proporcionó los "esqueletos" de las clases de Bootstrap (la estructura de las grillas, la sintaxis exacta del Navbar, las clases del Carrusel y las utilidades de flexbox como `d-flex` y `mt-auto`). También me dio el ejemplo de sintaxis para `console.log` en JS.
-*   **¿Qué modificamos nosotros?**
-    Yo escribí todo el contenido original (textos, reseñas, títulos, rutas de imágenes). Modifiqué profundamente el código de la IA para restaurar la semántica HTML5 (cambiando sus `<div>` genéricos por `<article>`, `<section>`, `<aside>` y `<figure>`). En CSS, desarrollé yo mismo el esquema de colores (rojo sangre y oscuro) y los efectos *hover*. En JavaScript, diseñé las variables específicas y las operaciones lógicas de mi temática.
+### Prompt 3 — Bootstrap
+**Necesitaba:** incorporar Bootstrap sin perder de vista qué estaba haciendo cada clase, ya que en clase solíamos copiar/pegar código sin detenernos a entenderlo.
+**Qué respondió la IA:** explicó cada clase nueva (`container`, `row`, `col`, `card`, `navbar`, `carousel`, `badge`) respondiendo siempre: qué significa, para qué sirve, si es de HTML/CSS/Bootstrap, por qué se usa ahí, y qué pasa si se quita.
+**Qué utilicé:** el patrón completo de Bootstrap en las 4 secciones — cards verticales en Inicio, cards horizontales en Imprescindibles (para diferenciarlas visualmente), un carousel en Historia, y un badge tipo "noticia" en Futuro, más un iframe de YouTube embebido con la clase `ratio-16x9`.
+**Qué aprendí:** cómo funciona la cascada de CSS (por qué el CSS de Bootstrap va antes que mi `styles.css` en el `<head>`), y la diferencia entre HTML semántico (`<article>`) y clases puramente visuales de Bootstrap (`card`) — y por qué conviene usarlos juntos, no uno en lugar del otro.
 
----
+### Prompt 4 — CSS
+**Necesitaba:** darle identidad visual al sitio (estética Y2K/DIY/infernal, con colores rojo sangre, morado y rosa) sin perder legibilidad ni cumplir por cumplir.
+**Qué respondió la IA:** propuso trabajar con variables CSS (`:root`) para la paleta de colores, y fue explicando cada propiedad nueva (`text-shadow`, `object-fit`, `border-left` para simular una línea de tiempo, `:hover` y `transition` para los botones) antes de aplicarla.
+**Qué utilicé:** el sistema de variables de color, la combinación de dos tipografías (Bungee para títulos grandes con estética "sucia" tipo trap, y una fuente legible para el cuerpo), y el efecto de card "hundida" en el mismo tono del fondo con borde morado, que decidí yo mismo tras comparar dos direcciones posibles (card más clara vs. más oscura que el fondo).
+**Qué aprendí:** que `!important` sirve para sobrescribir estilos "insistentes" de Bootstrap, pero que abusar de él hace perder el control de la cascada — se usa como excepción puntual, no como costumbre.
 
-# 6. Aprendizaje
+## ✍️ Código generado por IA vs. código propio
 
-**¿Qué concepto nuevo comprendí gracias a la IA?**
-Comprendí la lógica matemática de los sistemas de grillas en el diseño web. Antes no entendía por qué a veces los elementos saltaban a la siguiente línea, pero al aprender que el límite es "12 columnas por fila", pude planificar mejor si quería tarjetas verticales (3 de 4 columnas) o tarjetas horizontales (1 imagen de 4 columnas + texto de 8 columnas).
+- **Generado con guía de la IA:** la sintaxis base de componentes de Bootstrap que nunca había usado a fondo (carousel, badge, iframe responsive con `ratio`), y la explicación de propiedades CSS nuevas.
+- **Modificado/decidido por mí:** todo el contenido real (historia del sello, canciones, álbumes, línea de tiempo de hitos), la paleta de colores y su aplicación específica, la elección de tipografías, la estructura de las 5 secciones, y las decisiones de diseño (por ejemplo, pedir explícitamente que las cards de Imprescindibles usaran un layout distinto a las de Inicio para diferenciarlas).
 
----
+## ⭐ Prompt que más me ayudó
 
-# 7. Reflexión
+El de la etapa de **Bootstrap**, porque obligó a la IA a explicar cada clase con la misma estructura de 5 preguntas (qué es, para qué sirve, de dónde viene, por qué se usa, qué pasa si se quita). Eso evitó que terminara con "código que se ve bonito pero no puedo explicar" — que era justo mi mayor miedo al empezar esta actividad.
 
-**¿Hubo algún momento en que la IA generó código que no comprendía? ¿Qué hicimos?**
-Sí. Cuando quise hacer que los botones de "Escuchar ahora" reprodujeran un sonido, la IA me generó una función de JavaScript que usaba `document.querySelector` y `.addEventListener('click', function() {...})`. 
-Recordé la regla del documento: **PAUSA, PREGUNTA, COMPRENDE, DECIDE**. Al preguntarle, me explicó que eso era "Manipulación del DOM". Como aún no hemos visto ese tema en el bootcamp, decidí descartar ese código para no usar algo que no sé explicar por mí mismo. Resolví el requisito limitándome a usar `console.log` para mostrar la información del álbum, apegándome a mi nivel actual.
+## 🌱 Evolución de un prompt
+
+**Prompt inicial:** *"Hazme una página de películas."*
+
+**Prompt mejorado (adaptado a mi proyecto):**
+*"Actúa como tutor de desarrollo web para principiantes. Estoy creando un sitio web llamado 'Mi recomendador personal' sobre el sello discográfico La Vendición Records, utilizando HTML, CSS, Bootstrap y variables básicas de JavaScript. Ya conozco HTML, CSS, Bootstrap y variables en JavaScript, pero todavía no conozco funciones, ciclos ni manipulación del DOM. Ayúdame a dividir el proyecto en pasos pequeños, sin generar todo el código de una vez."*
+
+**Qué mejoró:** el prompt inicial no dice nada sobre el nivel del estudiante ni sobre cómo quiere que la IA le ayude — cualquier respuesta genérica hubiera servido, aunque no la entendiera. El prompt mejorado fija el rol de la IA (tutor, no generador), mi tema real, mis límites de conocimiento explícitos, y pide un proceso paso a paso en vez de una solución de una sola vez.
+
+## 💡 Aprendizaje
+
+Uno de los conceptos que más comprendí gracias a la IA fue la diferencia entre **estructura (HTML)**, **layout/componentes (Bootstrap)** y **estilo (CSS)** — antes tendía a verlo todo como "una sola cosa que hace que la página se vea bien". Ahora puedo explicar, por ejemplo, que `<article>` le da significado semántico a una recomendación, `card` le da su apariencia visual gracias a Bootstrap, y mi `styles.css` es lo que la hace sentir parte de mi identidad (colores, tipografía, bordes).
+
+## 🔍 Reflexión
+
+Sí hubo momentos donde la IA generó código que no comprendía del todo a la primera — por ejemplo, las clases `d-flex flex-column text-center` que aparecieron en mis cards sin que las hubiera pedido explícitamente. En vez de dejarlas sin más, pregunté qué hacía cada una antes de seguir usándolas. También tuve errores reales de depuración fuera del código en sí: un video de YouTube que no cargaba por copiar mal el ID del embed, y más de un conflicto de Git (`commit-m` sin espacio, y un push rechazado por ramas divergentes) que resolví entendiendo la diferencia entre mi repositorio local y el remoto en GitHub, en vez de solo copiar un comando sin saber qué hacía.
+
+## 📸 Captura del sitio funcionando
+
+*(Agregar aquí una captura de pantalla del sitio final)*
+
+## 🔗 Repositorio
+
+*(Agregar aquí el link a tu repositorio de GitHub)*
